@@ -1,8 +1,14 @@
 // Initialize AOS (Animate On Scroll)
 AOS.init({
-    duration: 800,
-    easing: 'ease-out',
-    once: true
+    duration: 1000,
+    easing: 'ease-out-cubic',
+    once: true,
+    startEvent: 'DOMContentLoaded',
+    disable: 'mobile',
+    offset: 50,
+    delay: 0,
+    mirror: false,
+    anchorPlacement: 'top-bottom'
 });
 
 // Initialize Particles.js
@@ -139,16 +145,5 @@ document.querySelectorAll('a[href$="CineMatch.apk"]').forEach(button => {
     button.addEventListener('click', () => {
         console.log('App download initiated');
         // You can add analytics tracking here
-    });
-});
-
-// Parallax effect on scroll
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.hero');
-    
-    parallaxElements.forEach(element => {
-        const speed = 0.5;
-        element.style.transform = `translateY(${scrolled * speed}px)`;
     });
 }); 

@@ -26,8 +26,8 @@
 }
 
 html, body {
-    max-width: 100vw;
-    overflow-x: hidden;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
     scroll-behavior: smooth;
     font-size: 16px;
 }
@@ -1664,17 +1664,35 @@ img, .phone-frame, .team-grid, .features-grid, .download-content, .about-grid {
 }
 
 @media (max-width: 600px) {
-    .container {
-        padding: 0 8px;
-        max-width: 100vw;
+    .container,
+    .hero,
+    .hero-wrapper,
+    .about-grid,
+    .download-content,
+    .features-grid,
+    .team-grid {
+        width: 100% !important;
+        max-width: 100vw !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
     }
     .phone-frame {
-        width: 100%;
+        width: 100% !important;
         max-width: 220px;
-        min-width: 0;
+        min-width: 0 !important;
+        margin: 0 auto !important;
     }
-    .team-grid, .features-grid, .download-content, .about-grid {
-        width: 100%;
-        min-width: 0;
+    .hero-image {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .cta-button,
+    .hero-buttons {
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
     }
 } 

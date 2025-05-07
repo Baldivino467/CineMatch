@@ -1671,13 +1671,16 @@ img, .phone-frame, .team-grid, .features-grid, .download-content, .about-grid {
     .download-content,
     .features-grid,
     .team-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
         width: 100% !important;
         max-width: 100vw !important;
         min-width: 0 !important;
-        margin: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        box-sizing: border-box !important;
+        margin: 0 auto 24px auto !important;
+        padding: 0 !important;
     }
     .phone-frame {
         width: 100% !important;
@@ -1762,5 +1765,48 @@ img, .phone-frame, .team-grid, .features-grid, .download-content, .about-grid {
         box-shadow: 0 2px 16px rgba(0,0,0,0.18);
         border-radius: 28px !important;
         padding: 6px !important;
+    }
+    .about-content, .about-image, .download-text, .download-image {
+        width: 100% !important;
+        max-width: 100vw !important;
+        min-width: 0 !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        padding: 0 0 12px 0 !important;
+    }
+    .feature-card, .enhanced-feature-card {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto 16px auto !important;
+    }
+    /* Footer layout */
+    .footer-content, .footer-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 24px !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .footer-section, .footer-brand {
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 auto 8px auto !important;
+    }
+    .footer-section ul {
+        padding: 0;
+        margin: 0 auto 8px auto;
+    }
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+    .footer-bottom {
+        text-align: center !important;
+        padding: 12px 0 0 0 !important;
+        font-size: 0.95rem;
+    }
+    /* General section padding */
+    .features, .about, .download, .team {
+        padding: 32px 0 24px 0 !important;
     }
 } 

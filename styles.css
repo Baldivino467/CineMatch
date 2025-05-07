@@ -72,9 +72,9 @@ h1 {
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
-    color: var(--text-color);
-    background: var(--gradient-1);
-    border: none;
+    color: var(--primary-color);
+    background: transparent;
+    border: 2px solid var(--primary-color);
     cursor: pointer;
     transition: all var(--transition-normal);
     position: relative;
@@ -87,7 +87,8 @@ h1 {
 .btn:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    background: var(--gradient-hover);
+    background: var(--primary-color);
+    color: var(--text-color);
 }
 
 .btn:active {
@@ -128,6 +129,9 @@ nav .container {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-size: 28px;
     font-weight: 800;
     background: linear-gradient(45deg, var(--primary-color), #FF7043);
@@ -135,6 +139,12 @@ nav .container {
     -webkit-text-fill-color: transparent;
     text-decoration: none;
     letter-spacing: -0.5px;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -186,13 +196,23 @@ nav .container {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.cta-button:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
 }
 
 .cta-button.primary {
-    background: #FF5722;
-    color: white;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
     padding: 16px 32px;
-    border-radius: 50px;
     font-weight: 600;
     font-size: 16px;
     text-transform: uppercase;
@@ -200,32 +220,47 @@ nav .container {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
-}
-
-.cta-button.primary i {
-    font-size: 20px;
+    transition: all 0.3s ease;
 }
 
 .cta-button.primary:hover {
+    background: var(--primary-color);
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 87, 34, 0.4);
-    background: #FF7043;
-}
-
-.cta-button.primary:active {
-    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
 }
 
 .cta-button.secondary {
-    background: transparent;
-    color: white;
     border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .cta-button.secondary:hover {
     background: var(--primary-color);
+    color: white;
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+}
+
+.cta-button i {
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .cta-button {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
 }
 
 /* Enhanced Hero Section */
@@ -970,7 +1005,11 @@ nav .container {
 
 /* Download Buttons */
 .download-buttons {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .version {
@@ -1287,8 +1326,9 @@ nav .container {
 
 /* Navigation Download Button */
 .nav-links .download-btn {
-    background: #FF5722;
-    color: white;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
     padding: 12px 28px;
     border-radius: 50px;
     font-weight: 600;
@@ -1309,7 +1349,8 @@ nav .container {
 }
 
 .nav-links .download-btn:hover {
-    background: #FF7043;
+    background: var(--primary-color);
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
 }
